@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certification & Skills - Portfolio Ridho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="css/animations.css" rel="stylesheet">
+  <link href="css/background.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'gradient': 'gradient 8s linear infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .skill-card {
+      transition: all 0.4s ease;
+      transform-style: preserve-3d;
+    }
+    .skill-card:hover {
+      transform: rotateY(10deg) translateZ(20px);
+    }
+    .cert-badge {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.5s ease;
+    }
+    .cert-badge.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .achievement-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+    .achievement-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+  <div id="background-container"></div>
+  <div id="header-container"></div>
+  <!-- Main Content -->
+  <section class="flex-grow p-12 bg-black bg-opacity-50">
+    <div class="container mx-auto max-w-6xl">
+      <!-- Skills Section -->
+      <div class="mb-16 animate-fade-in">
+        <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text">Skills</h2>
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg skill-card">
+          <h3 class="text-xl font-bold text-yellow-400 mb-6 gradient-text">Technical Skills</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Machine Learning -->
+            <div class="space-y-3">
+              <h4 class="text-yellow-300 mb-3">Machine Learning</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">PyTorch</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Deep Learning</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Medical Imaging</span>
+              </div>
+            </div>
+            
+            <!-- Data Science -->
+            <div>
+              <h4 class="text-yellow-300 mb-3">Data Science</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm">Data Analytics</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm">Python</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm">Statistical Analysis</span>
+              </div>
+            </div>
+
+            <!-- Development -->
+            <div>
+              <h4 class="text-yellow-300 mb-3">Development</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm">Web Development</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm">Git</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm">Cloud Computing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text">Sertifikasi</h2>
+        <div class="space-y-6">
+          <!-- Bangkit Academy -->
+          <div class="cert-badge bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <h3 class="text-2xl font-bold text-yellow-400 gradient-text">Bangkit Academy 2024</h3>
+                <p class="text-yellow-300 mt-1">Google, Tokopedia, Gojek, & Traveloka</p>
+              </div>
+              <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Machine Learning Path</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>Machine Learning Specialization by Andrew Ng</li>
+                <li>DeepLearning.AI TensorFlow Developer</li>
+                <li>TensorFlow: Data and Deployment</li>
+                <li>Mathematics for Machine Learning</li>
+              </ul>
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>Google IT Automation with Python</li>
+                <li>Google Data Analytics Professional</li>
+                <li>TensorFlow: Advanced Techniques</li>
+                <li>Generative AI for Everyone</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Other Certifications -->
+          <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold text-yellow-400 mb-4">Additional Certifications</h3>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li>Process Data from Dirty to Clean</li>
+              <li>Memulai Dasar Pemrograman untuk Menjadi Pengembang Software</li>
+              <li>Structuring Machine Learning Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Honors & Awards -->
+      <div>
+        <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text">Penghargaan</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="achievement-item bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+            <h3 class="text-xl font-bold text-yellow-400 mb-4">Kompetisi</h3>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li>Data Analytics Dash at COMPFEST 15</li>
+              <li>Capture The Flag at COMPFEST 15</li>
+              <li>Data Analysis Competition at Pekan Raya Statistika 2023</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold text-yellow-400 mb-4">Pengakuan</h3>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li>Basic Programming Mentor of Belajar Bersama Master (BBM)</li>
+              <li>Selected as one of 4,650 out of 57,000+ applicants in Bangkit Academy 2024</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+  <script src="js/main.js"></script>
+  <script>
+    // Animation for certificates and achievements
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.cert-badge, .achievement-item').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

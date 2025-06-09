@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title>Projects - Portfolio Ridho</title>  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="css/animations.css" rel="stylesheet">
+  <link href="css/background.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'gradient': 'gradient 8s linear infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              },
+            },
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col">
+  <!-- Background Container -->
+  <div id="background-container"></div>
+  
+  <!-- Header Container -->
+  <div id="header-container"></div>
+  <!-- Projects Section -->
+  <section class="flex-grow p-12 bg-black bg-opacity-50" id="projects">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text">Proyek</h2>
+      
+      <!-- Featured Project -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-12 card-hover animate-fade-in">
+        <div class="md:flex">
+          <div class="md:w-1/2 overflow-hidden">
+            <img src="img/project1.png" alt="Bangkit Capstone Project" 
+                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-8 md:w-1/2">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4 gradient-text">Bangkit Academy Capstone Project</h3>
+            <p class="text-gray-300 mb-4">Proyek kolaboratif yang menggabungkan Machine Learning, Android Development, dan Cloud Computing.</p>
+            <div class="mb-6">
+              <h4 class="text-yellow-300 mb-2">Technologies Used:</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full hover-up">TensorFlow</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full hover-up">Python</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full hover-up">Android</span>
+                <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full hover-up">Cloud Computing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Company Profile Website -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in delay-1">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Company Profile Website</h3>
+            <p class="text-gray-300 mb-4">Designed and developed company profile website for PT Aldzama using Wordpress and Figma.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">WordPress</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Figma</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Web Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Network & Security Project -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in delay-2">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Network Infrastructure Management</h3>
+            <p class="text-gray-300 mb-4">Implemented and maintained network infrastructure and security measures at B201 Telematics Laboratory.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Networking</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Security</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Infrastructure</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAP Project -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in delay-3">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">SAP BASIS System Upgrade</h3>
+            <p class="text-gray-300 mb-4">Managed SAP BASIS and performed OS Server upgrade for JOB Pertamina - Medco E&P Tomori Sulawesi.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">SAP BASIS</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Server Management</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">System Upgrade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competition Projects -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in delay-4">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Data Analytics Competition Project</h3>
+            <p class="text-gray-300 mb-4">Award-winning project for Data Analytics Dash at COMPFEST 15.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Data Analytics</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Python</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Data Visualization</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTF Project -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in delay-5">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Capture The Flag Challenge</h3>
+            <p class="text-gray-300 mb-4">Successful participation in CTF at COMPFEST 15, demonstrating cybersecurity skills.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Cybersecurity</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Ethical Hacking</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Project -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in delay-6">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">Data Analysis Research</h3>
+            <p class="text-gray-300 mb-4">Research project for Pekan Raya Statistika 2023 competition.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Statistical Analysis</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Research</span>
+              <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full">Data Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.card-hover').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

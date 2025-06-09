@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Ridho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="css/animations.css" rel="stylesheet">
+  <link href="css/background.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'gradient': 'gradient 8s linear infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              },
+            },
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col">
+  <!-- Background Container -->
+  <div id="background-container"></div>
+  
+  <!-- Header Container -->
+  <div id="header-container"></div>
+  <!-- About Section -->
+  <section class="flex-grow p-12 bg-black bg-opacity-50" id="about">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text">Tentang Saya</h2>
+      
+      <!-- Summary -->
+      <div class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8 card-hover animate-fade-in">
+        <div class="prose prose-lg text-gray-300">
+          <p class="mb-6">
+            Sebagai mahasiswa tingkat akhir Teknik Komputer di Institut Teknologi Sepuluh Nopember (ITS) Surabaya, 
+            saya memiliki passion dalam memanfaatkan teknologi untuk mendorong perubahan yang berarti. 
+            Minat utama saya terletak pada Data Science dan Machine Learning, di mana saya telah membangun 
+            fondasi yang kuat melalui pengalaman akademik dan praktis.
+          </p>
+          <p>
+            Saya selalu bersemangat untuk terhubung dengan profesional dan organisasi yang berbagi 
+            passion saya dalam teknologi dan inovasi. Jangan ragu untuk menghubungi saya di 
+            <a href="mailto:muhwmmadridho@gmail.com" class="text-yellow-400 hover:text-yellow-300 no-underline hover-up">muhwmmadridho@gmail.com</a> 
+            atau terhubung dengan saya di 
+            <a href="https://www.linkedin.com/in/ridhomujahid" class="text-yellow-400 hover:text-yellow-300 no-underline hover-up">LinkedIn</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <h3 class="text-2xl font-bold mb-6 text-yellow-500 gradient-text animate-fade-in delay-2">Pendidikan</h3>
+      <div class="bg-gray-800 p-8 rounded-lg shadow-lg card-hover animate-fade-in delay-3">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+          <div class="mb-4 md:mb-0">
+            <h4 class="text-xl font-bold text-yellow-400">Institut Teknologi Sepuluh Nopember (ITS)</h4>
+            <p class="text-yellow-300 mt-1">Bachelor's degree, Computer Engineering</p>
+          </div>
+          <p class="text-gray-400 text-sm md:text-base">June 2021 - September 2025</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Machine Learning</span>
+          <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Computer Vision</span>
+          <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Deep Learning</span>
+          <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Data Science</span>
+          <span class="px-3 py-1 bg-yellow-600/30 text-yellow-400 rounded-full text-sm hover-up">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Add intersection observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.card-hover').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

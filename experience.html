@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience - Portfolio Ridho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="css/animations.css" rel="stylesheet">
+  <link href="css/background.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'gradient': 'gradient 8s linear infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .timeline-item {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.6s ease;
+    }
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .timeline-dot::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ca8a04;
+      left: -10px;
+      top: 0;
+      transform: scale(0);
+      transition: transform 0.4s ease;
+    }
+    .timeline-item.visible .timeline-dot::before {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+  <div id="background-container"></div>
+  <div id="header-container"></div>  <!-- Experience Section -->
+  <section class="flex-grow p-12 bg-black bg-opacity-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Work Experience Timeline -->
+      <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text animate-fade-in">Pengalaman Kerja</h2>
+      <div class="space-y-8 mb-16">
+        <!-- PT Aldzama Current -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">IT Staff</h3>
+                <p class="text-yellow-300 mb-2">PT Aldzama</p>
+              </div>
+              <p class="text-gray-400">February 2025 - Present</p>
+            </div>
+            <p class="text-gray-300 mt-4">Gresik, East Java, Indonesia</p>
+          </div>
+        </div>
+
+        <!-- IT Staff Intern -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">IT Staff Intern</h3>
+                <p class="text-yellow-300 mb-2">PT Aldzama</p>
+              </div>
+              <p class="text-gray-400">August 2024 - January 2025</p>
+            </div>
+            <p class="text-gray-300 mt-4">Gresik, East Java, Indonesia</p>
+          </div>
+        </div>
+
+        <!-- Bangkit Academy -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Machine Learning Cohort</h3>
+                <p class="text-yellow-300 mb-2">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</p>
+              </div>
+              <p class="text-gray-400">February 2024 - July 2024</p>
+            </div>
+            <p class="text-gray-300 mt-4">Bandung, West Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Selected as one of 4,650 out of 57,000+ applicants</li>
+              <li>Completed multiple certifications including Google IT Automation, Data Analytics, and Machine Learning Specializations</li>
+              <li>Developed capstone project combining ML, Android development, and cloud computing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Perdana Consulting -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">SAP Basis Consultant Intern</h3>
+                <p class="text-yellow-300 mb-2">Perdana Consulting</p>
+              </div>
+              <p class="text-gray-400">July 2023 - August 2023</p>
+            </div>
+            <p class="text-gray-300 mt-4">Jakarta Selatan, Jakarta, Indonesia</p>
+            <p class="text-gray-300 mt-4">Managed SAP BASIS and Upgraded OS Server for JOB Pertamina - Medco E&P Tomori Sulawesi</p>
+          </div>
+        </div>
+      </div>      <!-- Organizational Experience Timeline -->
+      <h2 class="text-3xl font-bold mb-8 text-yellow-500 gradient-text animate-fade-in">Pengalaman Organisasi</h2>
+      <div class="space-y-8">
+        <!-- Head of Internal Affairs -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Head of Internal Affairs</h3>
+                <p class="text-yellow-300 mb-2">B201 Telematics Laboratory</p>
+              </div>
+              <p class="text-gray-400">April 2024 - April 2025</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Led and managed internal affairs of the laboratory</li>
+              <li>Coordinated with multiple divisions for efficient operation</li>
+              <li>Organized various internal events and activities</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Head of HRD HIMATEKKOM -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Head of Human Resource Development</h3>
+                <p class="text-yellow-300 mb-2">HIMATEKKOM ITS</p>
+              </div>
+              <p class="text-gray-400">March 2024 - March 2025</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Supervising every working program on PSDM HIMATEKKOM</li>
+              <li>Responsible for monitoring and evaluation of every HIMATEKKOM's member</li>
+            </ul>
+          </div>
+        </div>        <!-- Laboratory Assistant -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Laboratory Assistant</h3>
+                <p class="text-yellow-300 mb-2">B201 Telematics Laboratory</p>
+              </div>
+              <p class="text-gray-400">April 2023 - Present</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Specialized in Network and Security division</li>
+              <li>Configured and maintained network infrastructure</li>
+              <li>Implemented robust security measures</li>
+              <li>Mentored junior members in networking fundamentals</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Staff of Internal Affairs -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Staff of Internal Affairs</h3>
+                <p class="text-yellow-300 mb-2">B201 Telematics Laboratory</p>
+              </div>
+              <p class="text-gray-400">April 2023 - April 2024</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Coordinated internal activities and ensured smooth communication channels</li>
+              <li>Addressed the needs of lab members and maintained a positive working environment</li>
+              <li>Managed documentation of members' academic theses (Tugas Akhir)</li>
+              <li>Fostered efficient collaboration between different lab divisions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Staff of HRD HIMATEKKOM -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Staff of Human Resource Development</h3>
+                <p class="text-yellow-300 mb-2">HIMATEKKOM ITS</p>
+              </div>
+              <p class="text-gray-400">May 2023 - March 2024</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Responsible for managing Latihan Kepemimpinan Manajerial Mahasiswa Tingkat Dasar</li>
+              <li>Collecting data from every HIMATEKKOM's member</li>
+              <li>Content writer</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Head of PR MAGE 9 -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Head of Public Relations</h3>
+                <p class="text-yellow-300 mb-2">Multimedia and Game Event (MAGE) 9</p>
+              </div>
+              <p class="text-gray-400">January 2023 - November 2023</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Managed two Subdivisions (PR and Marketing) for MAGE 9</li>
+              <li>Social Media's concept maker</li>
+              <li>Content writer</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Staff of PR MAGE 8 -->
+        <div class="timeline-item relative pl-8 border-l-2 border-yellow-500">
+          <div class="timeline-dot"></div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg card-hover">
+            <div class="flex justify-between items-start flex-wrap">
+              <div>
+                <h3 class="text-xl font-bold text-yellow-400 gradient-text">Staff of Public Relations</h3>
+                <p class="text-yellow-300 mb-2">Multimedia and Game Event (MAGE) 8</p>
+              </div>
+              <p class="text-gray-400">February 2022 - November 2022</p>
+            </div>
+            <p class="text-gray-300 mt-4">Surabaya, East Java, Indonesia</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2 mt-4">
+              <li>Managed MAGE 8's social media (Instagram, Facebook, Tiktok, etc.)</li>
+              <li>Social Media's concept maker</li>
+              <li>Content writer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Container -->
+  <div id="footer-container"></div>
+  <script src="js/main.js"></script>
+  <script>
+    // Timeline animation
+    const observerTimeline = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.timeline-item').forEach((el) => {
+      observerTimeline.observe(el);
+    });
+  </script>
+</body>
+</html>
